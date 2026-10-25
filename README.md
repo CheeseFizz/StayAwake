@@ -22,6 +22,6 @@ Resets ThreadExecutionState to stop blocking sleep.
 
 ## Roadmap
 
-[x] Basic functionality: Set ThreadExecutionState in a PowerShell process to prevent sleep
-[ ] Test that it does what I want and not just what I told it to do...
-[ ] Update Get-Sleep to be able to check SystemExecutionState instead of just ThreadExecutionState
+- [x] Basic functionality: Set ThreadExecutionState in a PowerShell process to prevent sleep
+- [ ] Test that it does what I want and not just what I told it to do...
+- [ ] Update Get-Sleep to be able to check SystemExecutionState instead of just ThreadExecutionState
