@@ -77,6 +77,6 @@ function Disable-SleepWhile {
 Export-ModuleMember -Function @(
     "Disable-Sleep",
     "Enable-Sleep",
-    "Check-Sleep",
+    "Get-Sleep",
     "Disable-SleepWhile"
 )

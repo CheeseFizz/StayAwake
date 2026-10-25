@@ -72,7 +72,7 @@ PowerShellVersion = '5.1'
 FunctionsToExport = @(
     "Disable-Sleep",
     "Enable-Sleep",
-    "Check-Sleep",
+    "Get-Sleep",
     "Disable-SleepWhile"
 )
 

@@ -21,7 +21,7 @@ function Enable-Sleep {
     [ExecState]::SetThreadExecutionState($ES_CONTINUOUS) | Out-Null
 }
 
-function Check-Sleep {
+function Get-Sleep {
     param(
         [switch]$ShowFlags,
         [switch]$ReturnFlags
