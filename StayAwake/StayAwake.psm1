@@ -45,9 +45,10 @@ function Disable-SleepWhile {
         param(
             [string[]]$pn,
             [int]$mt,
-            [int]$ps
+            [int]$ps,
+            $Root
         )
-        . "$PSScriptRoot\Resources\StayAwakeHelpers.ps1"
+        . "$Root\Resources\StayAwakeHelpers.ps1"
 
         $tries = 0
         while ($true) {
@@ -67,11 +68,11 @@ function Disable-SleepWhile {
     }
 
     if ($AsJob) {
-        $job = Start-Job -ScriptBlock $sb -ArgumentList @($ProcessName, $MaxTries, $PollSec) -Name "Disable-SleepWhile"
+        $job = Start-Job -ScriptBlock $sb -ArgumentList @($ProcessName, $MaxTries, $PollSec, $PSScriptRoot) -Name "Disable-SleepWhile"
         return $job
     }
 
-    & $sb -pn $ProcessName -mt $MaxTries -ps $PollSec
+    & $sb -pn $ProcessName -mt $MaxTries -ps $PollSec -Root $PSScriptRoot
 }
 
 Export-ModuleMember -Function @(
